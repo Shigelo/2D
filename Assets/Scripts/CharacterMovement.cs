@@ -44,7 +44,7 @@ public class CharacterMovement : MonoBehaviour
         }
         transform.position += new Vector3(horizontalMovement, 0,0) * Time.deltaTime * movementSpeed;
     
-        if(Input.GetKeyDown(KeyCode.UpArrow) && Mathf.Abs(rigidBody.velocity.y) < 0.1f)
+        if(Input.GetKeyDown(KeyCode.UpArrow) && Mathf.Abs(rigidBody.linearVelocity.y) < 0.1f)
         {
             inFloor = false;
             rigidBody.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
